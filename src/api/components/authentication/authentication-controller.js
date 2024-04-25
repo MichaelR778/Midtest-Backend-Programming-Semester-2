@@ -35,7 +35,7 @@ async function login(request, response, next) {
         );
       } else {
         //reset
-        loginFails[email] = 0;
+        loginFails[email].count = 0;
       }
     } catch (error) {
       return next(error);
